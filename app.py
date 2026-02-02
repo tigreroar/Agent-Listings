@@ -193,7 +193,7 @@ st.title(f"Active Agent: {selected_agent}")
 
 if selected_agent == "Rick":
     st.markdown("### 🏘️ The Property Analyzer")
-    st.info("Upload your MLS (CSV) file to generate a winning strategic plan.")
+    st.info("Upload your MLS (CSV) file to generate a winning strategic plan. Fill in the spaces below to make the magic happen.")
     col1, col2 = st.columns([1, 2])
     with col1:
         uploaded_file = st.file_uploader("1. Upload MLS CSV", type=["csv"])
@@ -248,6 +248,7 @@ if selected_agent == "Rick":
 
 elif selected_agent == "Sherlock":
     st.markdown("### 🕵️‍♂️ Sherlock: The Ultimate Real Estate Analyst")
+    st.caption("I'm Sherlock, the best real estate analyst. I provide actionable cost estimates, identify red flags, and generate negotiation scripts for real estate agents. Please upload your photo for analysis, tell me what I should analyze, and in the spaces below, indicate the city where the property is located.")
     knowledge_base = load_knowledge_base()
     col1, col2 = st.columns([1, 1])
     with col1:
@@ -313,5 +314,6 @@ elif selected_agent == "Ava":
             st.markdown("---")
             st.markdown(response.text)
             st.code(response.text)
+
 
 
