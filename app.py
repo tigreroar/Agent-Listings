@@ -287,6 +287,7 @@ elif selected_agent == "Sherlock":
 
 elif selected_agent == "Ava":
     st.markdown("### ✍️ Ava: Senior Real Estate Copywriter")
+    st.caption("Turns basic details into cinematic and persuasive descriptions.")
     with st.form("ava_form"):
         col1, col2 = st.columns(2)
         with col1:
@@ -312,3 +313,4 @@ elif selected_agent == "Ava":
             st.markdown("---")
             st.markdown(response.text)
             st.code(response.text)
+
